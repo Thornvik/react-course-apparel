@@ -1,3 +1,5 @@
+import { UserAcctionTypes } from "./user.types";
+
 const INITIAL_STATE = {
   currentUser: null,
 };
@@ -5,7 +7,7 @@ const INITIAL_STATE = {
 const userReducer = (state = INITIAL_STATE, action) => {
   //if state is undefined it will fallback to the value of initial state
   switch (action.type) {
-    case "SET_CURRENT_USER": //if the action type is 'SET_CURRENT_USER' then we return a new object
+    case UserAcctionTypes.SET_CURRENT_USER: //if the action type is 'SET_CURRENT_USER' then we return a new object
       //return a new object to make the components rerender
       return {
         ...state, //everything on the state
