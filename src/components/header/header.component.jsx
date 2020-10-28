@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux"; // a higher order component that allows us to modify our component to have access to things related to redux
 
 import { auth } from "../../firebase/firebase.utils";
 
@@ -15,10 +16,10 @@ const Header = ({ currentUser }) => {
       </Link>
       <div className="options">
         <Link className="option" to="/shop">
-          Shop
+          SHOP
         </Link>
         <Link className="option" to="">
-          Contact
+          CONTACT
         </Link>
         {currentUser ? (
           <div className="option" onClick={() => auth.signOut()}>
@@ -35,4 +36,10 @@ const Header = ({ currentUser }) => {
   );
 };
 
-export default Header;
+const mapStateToProps = (state) => ({
+  //can be named anything but maoStateToPRops is standars with redux codebases
+  //state is the root-reducer
+  currentUser: state.user.currentUser,
+});
+
+export default connect(mapStateToProps)(Header);
