@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux"; // a higher order component that allows us to modify our component to have access to things related to redux
 import { createStructuredSelector } from "reselect";
 
-import { auth } from "../../firebase/firebase.utils";
 import CartIcon from "../cart-icon/cart-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
