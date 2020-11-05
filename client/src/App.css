@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans Condensed", sans-serif;
+  padding: 20px 40px;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
