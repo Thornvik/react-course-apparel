@@ -43,4 +43,13 @@
       border: none;
     }
   }
+
+  &.cover {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 800px) {
+    min-width: 100px;
+    padding: 0 30px;
+  }
 }
