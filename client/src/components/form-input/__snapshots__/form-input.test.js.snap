@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`formInput component should render forminput 1`] = `ShallowWrapper {}`;

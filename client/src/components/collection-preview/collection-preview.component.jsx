@@ -5,7 +5,13 @@ import CollectionItem from "../collection-item/collection-item.component";
 
 import "./collection-preview.style.scss";
 
-const CollectionPreview = ({ title, items, history, match, routeName }) => {
+export const CollectionPreview = ({
+  title,
+  items,
+  history,
+  match,
+  routeName,
+}) => {
   return (
     <div className="collection-preview">
       <h1
