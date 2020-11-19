@@ -1,6 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import { CollectionItem } from "./collection-item.component";
+import CustomButton from "../custom-button/custom-button.component";
 
 describe("collectionItem component", () => {
   let wrapper;
@@ -10,6 +11,8 @@ describe("collectionItem component", () => {
   const mockImageUrl = "www.testimage.com";
 
   beforeEach(() => {
+    mockAddItem = jest.fn();
+
     const mockProps = {
       item: {
         name: mockName,
@@ -31,6 +34,12 @@ describe("collectionItem component", () => {
       "backgroundImage",
       `url(${mockImageUrl})`
     );
+  });
+
+  it("should run additem when add item to cart button is clicked", () => {
+    wrapper.find(CustomButton).simulate("click");
+
+    expect(mockAddItem).toHaveBeenCalled();
   });
 
   it("should render name prop in name span", () => {
